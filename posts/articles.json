@@ -1,0 +1,18 @@
+{
+    "articles": [
+        {
+            "title": "test",
+            "imgUrl": "http://www.cs.stir.ac.uk/~kjt/sailing/lasc/image/wallpaper/loch-sunrise-5-4.jpg",
+            "jumpUrl": "http://www.bestbuy.ca",
+            "description": "",
+            "date": "2016-09-09"
+        },
+        {
+            "title": "test2",
+            "imgUrl": "http://www.cs.stir.ac.uk/~kjt/sailing/lasc/image/wallpaper/loch-winter-8-5.jpg",
+            "jumpUrl": "http://www.amazon.ca",
+            "description": "",
+            "date": "2016-09-09"
+        }
+    ]
+}
