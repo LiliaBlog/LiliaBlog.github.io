@@ -15,9 +15,11 @@ export default class Poster extends Component {
             this.getList();
         });
 
-        $(window).scroll(function () {
+        $(window).scroll( () => {
             if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                alert("bottom!");
+                this.listNum += 10;
+                this.getList();
+                console.log('new fetch')
             }
         });
     }

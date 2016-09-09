@@ -2,7 +2,18 @@ html,body{
     width: 100%;
     height: 100%;
     overflow-y: scroll;
-    overflow-x: hidden;  
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100vw;
+}
+
+#poster{
+    margin-top: 5vw;
 }
 
 .article{
