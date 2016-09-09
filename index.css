@@ -1,10 +1,17 @@
-html,body{
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#app {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-#header{
+#header {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,17 +19,17 @@ html,body{
     width: 100vw;
 }
 
-#poster{
+#poster {
     margin-top: 5vw;
 }
 
-.article{
+.article {
     width: 50vw;
     height: auto;
     margin: 2vw auto;
 }
 
-.article .img{
+.article .img {
     width: 100%;
     height: auto;
 }

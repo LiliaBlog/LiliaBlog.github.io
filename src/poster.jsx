@@ -14,9 +14,8 @@ export default class Poster extends Component {
             this.articles = data.articles;
             this.getList();
         });
-
-        $(window).scroll( () => {
-            if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+        $('#app').scroll( () => {
+            if ($('#app').scrollTop() + $('#app').innerHeight() >= ($('#app')[0].scrollHeight)) {
                 this.listNum += 10;
                 this.getList();
                 console.log('new fetch')
@@ -27,7 +26,7 @@ export default class Poster extends Component {
     render() {
         return (
             <div id="poster" className="container">
-                {this.state.loadArticles.map(function (a, i) {
+                {this.state.loadArticles.map( (a, i) => {
                     return (
                         <Article key={a.id} imgUrl={a.imgUrl} jumpUrl={a.jumpUrl}/>
                     );
