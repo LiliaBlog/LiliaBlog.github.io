@@ -1,18 +1,19 @@
-var path = require('path');
-var APP_DIR = path.resolve(__dirname, 'src/');
-
 module.exports = {
-    entry: APP_DIR + '/index.jsx',
+    entry: __dirname + '/src/index.jsx',
     output: {
-        path: '/',
+        path: __dirname + '/',
         filename: 'bundle.js'
     },
     module: {
         loaders: [
             {
                 test: /\.jsx?/,
-                include: APP_DIR,
+                include: __dirname + '/src',
                 loader: 'babel'
+            },
+            {
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
             }
         ]
     }
