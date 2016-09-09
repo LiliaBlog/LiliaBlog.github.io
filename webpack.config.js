@@ -1,5 +1,13 @@
+var Webpack = require('webpack');
 module.exports = {
     entry: __dirname + '/src/index.jsx',
+    plugins: [
+        new Webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify('production')
+            }
+        })
+    ],
     output: {
         path: __dirname + '/',
         filename: 'bundle.js'

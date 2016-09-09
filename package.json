@@ -4,7 +4,7 @@
   "description": "beauty blog",
   "main": "index.html",
   "scripts": {
-    "build": "webpack -d --watch"
+    "build": "webpack -p --watch --progress"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "css-loader": "^0.25.0",
     "file-loader": "^0.9.0",
     "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7"
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
   }
 }

@@ -10,9 +10,15 @@ export default class Poster extends Component {
         this.state = {
             loadArticles: []
         }
-        $.getJSON("./posts/articles.json",  (data) => {
+        $.getJSON("./posts/articles.json", (data) => {
             this.articles = data.articles;
             this.getList();
+        });
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                alert("bottom!");
+            }
         });
     }
 
