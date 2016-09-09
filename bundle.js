@@ -79,16 +79,69 @@
 	  function App() {
 	    _classCallCheck(this, App);
 	
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+	
+	    _this.subscribe = _this.subscribe.bind(_this);
+	    return _this;
 	  }
 	
 	  _createClass(App, [{
+	    key: 'subscribe',
+	    value: function subscribe() {
+	      alert();
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'p',
+	        'header',
 	        null,
-	        ' Hello World'
+	        _react2.default.createElement(
+	          'nav',
+	          { className: 'navbar navbar-default' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'container-fluid' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'navbar-header' },
+	              _react2.default.createElement(
+	                'button',
+	                { type: 'button', className: 'navbar-toggle collapsed', 'data-toggle': 'collapse', 'data-target': '#bs-example-navbar-collapse-1', 'aria-expanded': 'false' },
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'sr-only' },
+	                  'Toggle navigation'
+	                ),
+	                _react2.default.createElement('span', { className: 'icon-bar' }),
+	                _react2.default.createElement('span', { className: 'icon-bar' }),
+	                _react2.default.createElement('span', { className: 'icon-bar' })
+	              ),
+	              _react2.default.createElement(
+	                'a',
+	                { className: 'navbar-brand', href: '/' },
+	                'Lilia Beauty Blog'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'collapse navbar-collapse' },
+	              _react2.default.createElement(
+	                'ul',
+	                { className: 'nav navbar-nav navbar-right' },
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'a',
+	                    { onClick: this.subscribe },
+	                    'Subscribe'
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
 	      );
 	    }
 	  }]);
