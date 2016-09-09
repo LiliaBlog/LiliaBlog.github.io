@@ -15,7 +15,7 @@ export default class Header extends Component {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <a className="navbar-brand" href="/">SparklingShan Beauty Blog</a>
+                        <a className="navbar-brand"><b>SparklingShan Beauty Blog</b></a>
                     </div>
                     <div className="collapse navbar-collapse">
                         <ul className="nav navbar-nav navbar-right">

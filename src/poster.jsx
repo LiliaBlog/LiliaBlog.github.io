@@ -28,7 +28,7 @@ export default class Poster extends Component {
             <div id="poster" className="container">
                 {this.state.loadArticles.map( (a, i) => {
                     return (
-                        <Article key={a.id} imgUrl={a.imgUrl} jumpUrl={a.jumpUrl}/>
+                        <Article key={a.id} imgUrl={a.imgUrl} jumpUrl={a.jumpUrl} title={a.title} description={a.description}/>
                     );
                 }) }
             </div>

@@ -10,8 +10,6 @@ export default class Article extends Component {
                 <a target="_blank" href={this.props.jumpUrl} className="img">
                     <img src={this.props.imgUrl} width="100%"/>
                 </a>
-                <div className="title"></div>
-                <div className="dscpt"></div>
             </div>
         );
     };
