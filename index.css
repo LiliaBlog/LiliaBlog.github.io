@@ -54,7 +54,7 @@ body {
 }
 
 @media screen and (min-width: 1366px) {
-    body {
+    #app {
         width: 1366px;
     }
 }
