@@ -1,6 +1,7 @@
 var Webpack = require('webpack');
+var path = require('path');
 module.exports = {
-    entry: __dirname + '/src/index.jsx',
+    entry: path.resolve(__dirname, 'src/index.jsx'),
     plugins: [
         new Webpack.DefinePlugin({
             'process.env': {
@@ -9,14 +10,14 @@ module.exports = {
         })
     ],
     output: {
-        path: __dirname + '/',
+        path: path.resolve(__dirname, '/'),
         filename: 'bundle.js'
     },
     module: {
         loaders: [
             {
                 test: /\.jsx?/,
-                include: __dirname + '/src',
+                include:path.resolve(__dirname, 'src/'),
                 loader: 'babel'
             },
             {
