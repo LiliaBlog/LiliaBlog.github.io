@@ -11,12 +11,16 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: rgba(230, 230, 222, 0.5);
+    margin: 0 auto;
 }
 
 #header {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 99;
     width: 100%;
     box-shadow: 0 1px 0px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.05);
@@ -55,6 +59,9 @@ body {
 
 @media screen and (min-width: 1366px) {
     #app {
+        width: 1366px;
+    }
+    #header{
         width: 1366px;
     }
 }

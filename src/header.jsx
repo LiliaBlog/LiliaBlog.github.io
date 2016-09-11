@@ -19,7 +19,7 @@ export default class Header extends Component {
                     </div>
                     <div className="collapse navbar-collapse">
                         <ul className="nav navbar-nav navbar-right">
-                            <li><a onClick={this.subscribe}>Subscribe</a></li>
+                            <li><a onClick={}>About me</a></li>
                         </ul>
                     </div>
                 </div>
