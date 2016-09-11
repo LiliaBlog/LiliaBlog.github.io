@@ -23,7 +23,6 @@ export default class Poster extends Component {
                 scrollTriggered = true;
                 this.listNum += 18;
                 scrollTriggered = this.getList();
-                console.log('%c new fetch', 'color: green');
             }
         });
     }
