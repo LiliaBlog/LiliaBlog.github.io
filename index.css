@@ -17,19 +17,26 @@ body {
     top: 0;
     left: 0;
     z-index: 99;
-    width: 100vw;
+    width: 100%;
     box-shadow: 0 1px 0px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.05);
     -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.05);
 }
 
 #poster {
-    margin-top: 2vw;
+    margin-top: 10%;
+    width: 81%;
+}
+
+#colume1, #colume2, #colume3{
+    width: 33%;
+    display: block;
+    float: left;
 }
 
 .article {
-    width: 50vw;
+    width: 98%;
     height: auto;
-    margin: 5vw auto;
+    margin: 1% auto;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
     background-color: rgba(255,255,255,0.5);
