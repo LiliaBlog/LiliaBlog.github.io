@@ -21,8 +21,13 @@ export default class Poster extends Component {
         $('#app').scroll(() => {
             if ($('#app').scrollTop() + $('#app').innerHeight() >= ($('#app')[0].scrollHeight) / 1.3 && !scrollTriggered) {
                 scrollTriggered = true;
-                this.listNum += 18;
-                scrollTriggered = this.getList();
+                if (this.listNum <= this.articles.length) {
+                    this.listNum += 18;
+                    scrollTriggered = this.getList();
+                }
+                else {
+                    scrollTriggered = false;
+                }
             }
         });
     }
@@ -33,21 +38,21 @@ export default class Poster extends Component {
                 <div id="colume1">
                     {this.state.colume_1.map((a, i) => {
                         return (
-                            <Article key={uuid.v1()} imgUrl={a.imgUrl} jumpUrl={a.jumpUrl} title={a.title} description={a.description}/>
+                            <Article key={uuid.v1() } imgUrl={a.imgUrl} jumpUrl={a.jumpUrl} title={a.title} description={a.description}/>
                         );
                     }) }
                 </div>
                 <div id="colume2">
                     {this.state.colume_2.map((a, i) => {
                         return (
-                            <Article key={uuid.v1()} imgUrl={a.imgUrl} jumpUrl={a.jumpUrl} title={a.title} description={a.description}/>
+                            <Article key={uuid.v1() } imgUrl={a.imgUrl} jumpUrl={a.jumpUrl} title={a.title} description={a.description}/>
                         );
                     }) }
                 </div>
                 <div id="colume3">
                     {this.state.colume_3.map((a, i) => {
                         return (
-                            <Article key={uuid.v1()} imgUrl={a.imgUrl} jumpUrl={a.jumpUrl} title={a.title} description={a.description}/>
+                            <Article key={uuid.v1() } imgUrl={a.imgUrl} jumpUrl={a.jumpUrl} title={a.title} description={a.description}/>
                         );
                     }) }
                 </div>
@@ -87,6 +92,6 @@ export default class Poster extends Component {
             colume_3: c3
         });
 
-       return false;
+        return false;
     }
 }
