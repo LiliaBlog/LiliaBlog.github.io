@@ -1,6 +1,6 @@
 node_modules
-*.eot
-*.woff
-*.svg
-*.woff2
-*.ttf
+/*.eot
+/*.woff
+/*.svg
+/*.woff2
+/*.ttf
