@@ -8,26 +8,24 @@ export default class Article extends Component {
         this.state = {
             animated: false
         }
-    }
-
-    componentDidMount() {
-        var dom = ReactDOM.findDOMNode(this);
-        if (this.state.animated === false) {
-            this.setState({ animated: true });
-            $(dom).addClass('flipInX animated');
-            $(dom).on('animaionend', () => {
-                $(dom).removeClass('flipInX animated');
-            });
-        }
+        this.mouseEnter = this.mouseEnter.bind(this);
     }
 
     render() {
         return (
-            <div className="article">
+            <div className="article" onMouseEnter={this.mouseEnter}>
                 <a target="_blank" href={this.props.jumpUrl} className="img">
                     <img src={this.props.imgUrl} width="100%"/>
                 </a>
             </div>
         );
-    };
+    }
+
+    mouseEnter(e) {
+        // var dom = ReactDOM.findDOMNode(this);
+        // $(dom).addClass('pulse animated');
+        // $(dom).on('animationend', () => {
+        //     $(dom).removeClass('pulse animated');
+        // });
+    }
 }
