@@ -12,7 +12,7 @@ export default class Article extends Component {
 
     render() {
         return (
-            <div className="article" onMouseEnter={this.mouseEnter}>
+            <div className="myPost" onMouseEnter={this.mouseEnter}>
                 <a target="_blank" href={this.props.jumpUrl} className="img">
                     <img src={this.props.imgUrl} width="100%"/>
                 </a>

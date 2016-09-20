@@ -18,8 +18,8 @@ export default class Poster extends Component {
             this.articles = data.articles;
             this.getList();
         });
-        $('#app').scroll(() => {
-            if ($('#app').scrollTop() + $('#app').innerHeight() >= ($('#app')[0].scrollHeight) / 1.3 && !scrollTriggered) {
+        $(window).scroll(() => {
+            if ($(window).scrollTop() + $(window).innerHeight() >= $(document).height() / 1.3 && !scrollTriggered) {
                 scrollTriggered = true;
                 if (this.listNum <= this.articles.length) {
                     this.listNum += 18;
