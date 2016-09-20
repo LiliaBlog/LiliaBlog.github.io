@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
-export default class Article extends Component {
+export default class MyPost extends Component {
     constructor() {
         super();
         this.state = {

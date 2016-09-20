@@ -56,7 +56,6 @@ export default class Poster extends Component {
                         );
                     }) }
                 </div>
-                <div sytle="float: none"></div>
             </div>
         );
     }
