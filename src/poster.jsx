@@ -7,6 +7,7 @@ export default class Poster extends Component {
     constructor() {
         super();
         var scrollTriggered = false;
+        var disabled = false;
         this.listNum = 18;
         this.articles = null;
         this.state = {
@@ -19,16 +20,24 @@ export default class Poster extends Component {
             this.getList();
         });
         $(window).scroll(() => {
-            if ($(window).scrollTop() + $(window).innerHeight() >= $(document).height() / 1.3 && !scrollTriggered) {
-                scrollTriggered = true;
-                if (this.listNum <= this.articles.length) {
-                    this.listNum += 18;
-                    scrollTriggered = this.getList();
-                }
-                else {
-                    scrollTriggered = false;
+            if (disabled === false){
+                if ($(window).scrollTop() + $(window).innerHeight() >= $(document).height() / 1.3 && !scrollTriggered) {
+                    scrollTriggered = true;
+                    if (this.listNum <= this.articles.length) {
+                        this.listNum += 18;
+                        scrollTriggered = this.getList();
+                    }
+                    else {
+                        scrollTriggered = false;
+                    }
                 }
             }
+        });
+        $(window).on('navOutfits', function(){
+            disabled = true;
+        });
+        $(window).on('navShop', function(){
+            disabled = false;
         });
     }
 

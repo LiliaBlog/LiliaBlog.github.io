@@ -5,17 +5,14 @@ import $ from 'jquery';
 export default class MyPost extends Component {
     constructor() {
         super();
-        this.state = {
-            animated: false
-        }
     }
-
     render() {
         return (
-            <div className="myPost" onMouseEnter={this.mouseEnter}>
+            <div className="myPost">
                 <a target="_blank" href={this.props.jumpUrl} className="img">
-                    <img src={this.props.imgUrl} width="100%"/>
+                    <img src={this.props.imgUrl} width="100%" height="100%"/>
                 </a>
+                <div className="postTitile">{this.props.title}</div>
             </div>
         );
     }
