@@ -11,7 +11,7 @@ export default class Header extends Component {
                     <div id="headerTitle">SparklingShan's Blog</div>
                     <div className="navOwn">Outfits</div>
                     <div className="divider"></div>
-                    <div className="navHome">Home</div>
+                    <div className="navHome">Shop</div>
                 </div>
             </nav>
         );
