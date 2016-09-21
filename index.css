@@ -107,7 +107,7 @@ body {
     background-color: transparent;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 300px) {
     #headerTitle {
         padding: 0;
         font-size: 6vw;
