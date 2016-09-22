@@ -106,34 +106,33 @@ body {
 }
 
 .myPost {
-    width: 45%;
-    margin: 3% 2.5%;
+    width: 95%;
+    margin: 9% auto;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
     background-color: rgba(255, 255, 255, 0.9);
     overflow: hidden;
-    float: left;
-    padding-bottom: 56.25%;
-    position: relative;
 }
 
 .myPost .img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 80%;
     background-color: transparent;
 }
 
 .myPost .postTitile {
-    position: absolute;
-    top: 80%;
     left: 0;
     color: #aaa;
     font-family: 'Montserrat-Light';
     font-size: 1.6vw;
     padding: 5% 2%;
+}
+
+#myColume1,
+#myColume2 {
+    width: 48%;
+    display: block;
+    float: left;
+    margin: 0 1%;
 }
 
 @media screen and (min-width: 300px) {
