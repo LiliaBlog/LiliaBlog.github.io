@@ -44,21 +44,21 @@ export default class Poster extends Component {
     render() {
         return (
             <div id="poster" className="container">
-                <div id="colume1">
+                <div className="colume1">
                     {this.state.colume_1.map((a, i) => {
                         return (
                             <Article key={uuid.v1() } imgUrl={a.imgUrl} jumpUrl={a.jumpUrl} title={a.title} description={a.description}/>
                         );
                     }) }
                 </div>
-                <div id="colume2">
+                <div className="colume2">
                     {this.state.colume_2.map((a, i) => {
                         return (
                             <Article key={uuid.v1() } imgUrl={a.imgUrl} jumpUrl={a.jumpUrl} title={a.title} description={a.description}/>
                         );
                     }) }
                 </div>
-                <div id="colume3">
+                <div className="colume3">
                     {this.state.colume_3.map((a, i) => {
                         return (
                             <Article key={uuid.v1() } imgUrl={a.imgUrl} jumpUrl={a.jumpUrl} title={a.title} description={a.description}/>

@@ -12,8 +12,9 @@ export default class Poster extends Component {
         this.articles = null;
         this.state = {
             colume_1: [],
-            colume_2: []
-        };
+            colume_2: [],
+            colume_3: []
+        }
         $.getJSON("./posts/myPosts.json", (data) => {
             this.articles = data.articles;
             this.getList();
@@ -43,15 +44,22 @@ export default class Poster extends Component {
     render() {
         return (
             <div id="myPoster" className="container">
-                <div id="myColume1">
+                <div className="colume1">
                     {this.state.colume_1.map((a, i) => {
                         return (
                             <MyPost key={uuid.v1() } imgUrl={a.imgUrl} jumpUrl={a.jumpUrl} title={a.title} description={a.description}/>
                         );
                     }) }
                 </div>
-                <div id="myColume2">
+                <div className="colume2">
                     {this.state.colume_2.map((a, i) => {
+                        return (
+                            <MyPost key={uuid.v1() } imgUrl={a.imgUrl} jumpUrl={a.jumpUrl} title={a.title} description={a.description}/>
+                        );
+                    }) }
+                </div>
+                <div className="colume3">
+                    {this.state.colume_3.map((a, i) => {
                         return (
                             <MyPost key={uuid.v1() } imgUrl={a.imgUrl} jumpUrl={a.jumpUrl} title={a.title} description={a.description}/>
                         );
@@ -64,18 +72,23 @@ export default class Poster extends Component {
     getList() {
         var c1 = [];
         var c2 = [];
+        var c3 = [];
 
         if (this.articles[0]) c1.push(this.articles[0]);
         if (this.articles[1]) c2.push(this.articles[1]);
+        if (this.articles[2]) c3.push(this.articles[2]);
 
-        for (var i = 2; i < this.listNum; i++) {
+        for (var i = 3; i < this.listNum; i++) {
             if (this.articles[i]) {
-                switch (i % 2) {
+                switch (i % 3) {
                     case 0:
                         c1.push(this.articles[i]);
                         break;
                     case 1:
                         c2.push(this.articles[i]);
+                        break;
+                    case 2:
+                        c3.push(this.articles[i]);
                         break;
                 }
             }
@@ -83,7 +96,8 @@ export default class Poster extends Component {
 
         this.setState({
             colume_1: c1,
-            colume_2: c2
+            colume_2: c2,
+            colume_3: c3
         });
 
         return false;

@@ -64,9 +64,9 @@ body {
     width: 72%;
 }
 
-#colume1,
-#colume2,
-#colume3 {
+.colume1,
+.colume2,
+.colume3 {
     width: 31%;
     display: block;
     float: left;
@@ -116,17 +116,9 @@ body {
     left: 0;
     color: #888;
     font-family: 'Montserrat-Light';
-    font-size: 1.6vw;
+    font-size: 1.2vw;
     padding: 5% 2%;
     background-color: white;
-}
-
-#myColume1,
-#myColume2 {
-    width: 48%;
-    display: block;
-    float: left;
-    margin: 0 1%;
 }
 
 @media screen and (min-width: 300px) {
@@ -143,6 +135,12 @@ body {
     }
     .navOwn {
         margin-right: 7%;
+    }
+    #myPoster{
+        width: 93%;
+    }
+    .myPost .postTitile{
+        font-size: 2.2vw;
     }
     #poster {
         width: 93%;
