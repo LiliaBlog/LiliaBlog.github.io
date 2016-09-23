@@ -9,7 +9,7 @@ export default class Header extends Component {
         return (
             <nav id="header" className="navbar navbar-default">
                 <div className="container-fluid">
-                    <div id="headerTitle">SparklingShan</div>
+                    <div id="headerTitle">SparklingShan.</div>
                     <div className="navOwn" onClick={this.triggerNav.bind(this, 'outfits')}>Outfits</div>
                     <div className="navDivider">|</div>
                     <div className="navHome" onClick={this.triggerNav.bind(this, 'shop')}>Shop</div>
