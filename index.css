@@ -21,7 +21,7 @@ body {
     border: none;
     padding-top: 4%;
     padding-bottom: 1%;
-    background-color: white;
+    background: transparent;
 }
 
 .container-fluid {
@@ -51,7 +51,7 @@ body {
 }
 
 .navOwn {
-    margin-right: 7%;
+    margin-right: 12%;
 }
 
 .navDivider {
@@ -132,14 +132,17 @@ body {
 @media screen and (min-width: 300px) {
     #headerTitle {
         padding: 0;
-        font-size: 7vw;
-        width: 60%;
+        font-size: 6.5vw;
+        width: 35%;
     }
     .navHome,
     .navOwn,
     .navDivider {
         font-size: 3.2vw;
         padding-top: 5%;
+    }
+    .navOwn {
+        margin-right: 7%;
     }
     #poster {
         width: 93%;
@@ -148,16 +151,22 @@ body {
 
 @media screen and (min-width: 768px) {
     #headerTitle {
-        font-size: 4.7vw;
+        font-size: 4vw;
         padding-top: 0;
         padding-bottom: 0;
-        width: 40%;
+        width: 20%;
     }
     .navHome,
     .navOwn,
     .navDivider {
         padding-top: 2%;
         font-size: 1.5vw;
+    }
+    .navOwn {
+        margin-right: 12%;
+    }
+    #poster {
+        width: 80%;
     }
 }
 
@@ -170,7 +179,8 @@ body {
         width: 1366px;
     }
     #headerTitle {
-        font-size: 65px;
+        font-size: 60px;
+        width: 25%;
         padding-top: 30px;
     }
     .navHome,
@@ -181,6 +191,7 @@ body {
     }
     #poster {
         margin-top: 10px;
+        width: 80%;
     }
     .myPost .postTitile {
         font-size: 23px;
