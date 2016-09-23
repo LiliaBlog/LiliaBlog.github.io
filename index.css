@@ -91,13 +91,13 @@ body {
 }
 
 #myPoster {
-    width: 80%;
+    width: 72%;
     display: none;
 }
 
 .myPost {
-    width: 95%;
-    margin: 9% auto;
+    width: 100%;
+    margin: 6% auto;
     /*box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);*/
     overflow: hidden;
@@ -163,7 +163,13 @@ body {
     .navOwn {
         margin-right: 12%;
     }
+        .myPost .postTitile{
+        font-size: 1.3vw;
+    }
     #poster {
+        width: 80%;
+    }
+    #myPoster{
         width: 80%;
     }
 }
@@ -192,7 +198,7 @@ body {
         width: 80%;
     }
     .myPost .postTitile {
-        font-size: 23px;
+        font-size: 20px;
     }
 }
 
