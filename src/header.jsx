@@ -21,15 +21,15 @@ export default class Header extends Component {
         switch(index){
             case 'shop':
                 $(window).trigger('navShop');
-                $('.navOwn').css('color', '#abb');
-                $('.navHome').css('color', 'rgba(50,50,50,0.7)');
+                $('.navOwn').css('color', '#555');
+                $('.navHome').css('color', 'rgba(50,50,50,0.5)');
                 $('.navHome').css('text-decoration', 'underline');
                 $('.navOwn').css('text-decoration', 'none');
             break;
             case 'outfits':
                 $(window).trigger('navOutfits');
-                $('.navOwn').css('color', 'rgba(50,50,50,0.7)');
-                $('.navHome').css('color', '#abb');
+                $('.navOwn').css('color', 'rgba(50,50,50,0.5)');
+                $('.navHome').css('color', '#555');
                 $('.navHome').css('text-decoration', 'none');
                 $('.navOwn').css('text-decoration', 'underline');
             break;
