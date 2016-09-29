@@ -195,6 +195,9 @@ body {
     #myPoster {
         width: 80%;
     }
+    #backToTop button{
+        font-size: 3vw;
+    }
 }
 
 @media screen and (min-width: 1366px) {
