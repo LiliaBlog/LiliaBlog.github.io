@@ -8,6 +8,7 @@ import MyPoster from './myPoster.jsx';
 
 class App extends Component {
   componentDidMount() {
+    var defaultHeight = $(window).innerHeight();
     $(window).on('navShop', function () {
       $('#poster').fadeIn(500);
       $('#myPoster').hide();
@@ -17,7 +18,7 @@ class App extends Component {
       $('#myPoster').fadeIn(500);
     });
     $(window).scroll(()=>{
-      if ($(window).scrollTop() > $(window).innerHeight() / 2){
+      if ($(window).scrollTop() > defaultHeight / 2){
         $('#backToTop').show();
       } else {
         $('#backToTop').hide();
