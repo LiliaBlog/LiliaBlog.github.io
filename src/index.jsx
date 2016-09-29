@@ -34,7 +34,7 @@ class App extends Component {
         <Poster />
         <MyPoster />
         <div id="backToTop">
-          <button><span className="glyphicon glyphicon-chevron-up"></span></button>
+          <button>TOP</button>
         </div>
       </div>
     );
