@@ -9,12 +9,12 @@ import MyPoster from './myPoster.jsx';
 class App extends Component {
   componentDidMount() {
     $(window).on('navShop', function () {
-      $('#poster').show();
+      $('#poster').fadeIn(500);
       $('#myPoster').hide();
     });
     $(window).on('navOutfits', function () {
       $('#poster').hide();
-      $('#myPoster').show();
+      $('#myPoster').fadeIn(500);
     });
     $(window).scroll(()=>{
       if ($(window).scrollTop() > $(window).innerHeight() / 2){
