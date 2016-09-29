@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import {TweenMax} from 'gsap';
 
 export default class Header extends Component {
-    constructor() {
-        super();
+    componentDidMount(){
+        TweenMax.set('#headerTitle', {scaleX: 0, opacity: 0, transformOrigin: 'center'});
+        TweenMax.to('#headerTitle', 1, {scaleX: 1, opacity: 1, transformOrigin: 'center'});
     }
     render() {
         return (
