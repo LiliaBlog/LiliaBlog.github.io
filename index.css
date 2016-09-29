@@ -220,6 +220,9 @@ body {
     .myPost .postTitile {
         font-size: 20px;
     }
+    #backToTop button{
+        font-size: 30px;
+    }
 }
 
 @font-face {
