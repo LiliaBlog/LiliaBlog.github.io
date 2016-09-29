@@ -7,14 +7,24 @@ import Poster from './poster.jsx';
 import MyPoster from './myPoster.jsx';
 
 class App extends Component {
-  componentDidMount(){
-    $(window).on('navShop', function(){
-        $('#poster').show();
-        $('#myPoster').hide();
+  componentDidMount() {
+    $(window).on('navShop', function () {
+      $('#poster').show();
+      $('#myPoster').hide();
     });
-    $(window).on('navOutfits', function(){
-        $('#poster').hide();
-        $('#myPoster').show();
+    $(window).on('navOutfits', function () {
+      $('#poster').hide();
+      $('#myPoster').show();
+    });
+    $(window).scroll(()=>{
+      if ($(window).scrollTop() > $(window).innerHeight() / 2){
+        $('#backToTop').show();
+      } else {
+        $('#backToTop').hide();
+      }
+    });
+    $('#backToTop').click(()=>{
+      $("html, body").animate({scrollTop: 0}, 300);
     });
   }
   render() {
@@ -23,6 +33,9 @@ class App extends Component {
         <Header />
         <Poster />
         <MyPoster />
+        <div id="backToTop">
+          <button><span className="glyphicon glyphicon-chevron-up"></span></button>
+        </div>
       </div>
     );
   }

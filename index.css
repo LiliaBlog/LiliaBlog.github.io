@@ -121,6 +121,26 @@ body {
     background-color: white;
 }
 
+#backToTop {
+    position: fixed;
+    right: 0;
+    bottom: 5vw;
+    display: none;
+}
+
+#backToTop:hover{
+    background-color: #999;
+}
+
+#backToTop button {
+    padding: 2% 20%;
+    font-size: 3vw;
+    border: none;
+    border-radius: 1px;
+    background-color: rgba(150,150,150,0.5);
+    color: #555;
+}
+
 @media screen and (min-width: 300px) {
     #headerTitle {
         padding: 0;
@@ -136,10 +156,10 @@ body {
     .navOwn {
         margin-right: 7%;
     }
-    #myPoster{
+    #myPoster {
         width: 93%;
     }
-    .myPost .postTitile{
+    .myPost .postTitile {
         font-size: 2.2vw;
     }
     #poster {
@@ -163,13 +183,13 @@ body {
     .navOwn {
         margin-right: 12%;
     }
-        .myPost .postTitile{
+    .myPost .postTitile {
         font-size: 1.3vw;
     }
     #poster {
         width: 80%;
     }
-    #myPoster{
+    #myPoster {
         width: 80%;
     }
 }
