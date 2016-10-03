@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
 import $ from 'jquery';
+import {} from './index.css';
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 import Header from './header.jsx';
 import Poster from './poster.jsx';
