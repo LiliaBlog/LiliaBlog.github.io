@@ -123,12 +123,12 @@ body {
 
 #backToTop {
     position: fixed;
-    right: 0;
+    right: 1vw;
     bottom: 5vw;
     display: none;
 }
 
-#backToTop:hover{
+#backToTop:hover {
     background-color: #999;
 }
 
@@ -137,7 +137,7 @@ body {
     font-size: 2vw;
     border: none;
     border-radius: 1px;
-    background-color: rgba(150,150,150,0.5);
+    background-color: rgba(150, 150, 150, 0.5);
     color: #555;
 }
 
@@ -165,7 +165,7 @@ body {
     #poster {
         width: 93%;
     }
-    #backToTop button{
+    #backToTop button {
         font-size: 5vw;
     }
 }
@@ -195,7 +195,7 @@ body {
     #myPoster {
         width: 80%;
     }
-    #backToTop button{
+    #backToTop button {
         font-size: 3vw;
     }
 }
@@ -226,7 +226,7 @@ body {
     .myPost .postTitile {
         font-size: 20px;
     }
-    #backToTop button{
+    #backToTop button {
         font-size: 30px;
     }
 }

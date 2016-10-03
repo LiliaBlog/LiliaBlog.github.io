@@ -17,7 +17,7 @@ export default class MyPost extends Component {
         return (
             <div className="myPost" onMouseEnter={this.hoverEnter.bind(this) } onMouseLeave={this.hoverLeave.bind(this) }>
                 <a target="_blank" href={this.props.jumpUrl} className="img">
-                    <img src={this.props.imgUrl} width="100%" height="100%" ref={(ref) => this.article = ref}/>
+                    <img src={this.props.imgUrl} width="100%" ref={(ref) => this.article = ref}/>
                 </a>
                 <div className="postTitile">{this.props.title}</div>
             </div>
