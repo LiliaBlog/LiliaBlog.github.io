@@ -6,8 +6,7 @@ import uuid from 'uuid';
 export default class Poster extends Component {
     constructor() {
         super();
-        var scrollTriggered = false;
-        var disabled = false;
+        this.scrollTriggered = false;
         this.listNum = 18;
         this.articles = null;
         this.state = {
@@ -19,28 +18,24 @@ export default class Poster extends Component {
             this.articles = data.articles;
             this.getList();
         });
-        $(window).scroll(() => {
-            if (disabled === false){
-                if ($(window).scrollTop() + $(window).innerHeight() >= $(document).height() / 1.3 && !scrollTriggered) {
-                    scrollTriggered = true;
-                    if (this.listNum <= this.articles.length) {
-                        this.listNum += 18;
-                        scrollTriggered = this.getList();
-                    }
-                    else {
-                        scrollTriggered = false;
-                    }
-                }
+
+        $(window).on('updatePoster', () => {
+            this.scrollTriggered = true;
+            if (this.listNum <= this.articles.length) {
+                this.listNum += 18;
+                this.scrollTriggered = this.getList();
+            }
+            else {
+                this.scrollTriggered = false;
             }
         });
-        $(window).on('navOutfits', function(){
-            disabled = true;
-        });
-        $(window).on('navShop', function(){
-            disabled = false;
-        });
     }
-
+    componentDidMount() {
+        $(window).scroll(this.scroll);
+    }
+    componentWillUnmount() {
+        $(window).off('scroll', this.scroll);
+    }
     render() {
         return (
             <div id="poster" className="container">
@@ -101,5 +96,11 @@ export default class Poster extends Component {
         });
 
         return false;
+    }
+
+    scroll() {
+        if ($(window).scrollTop() + $(window).innerHeight() >= $(document).height() / 1.3 && !this.scrollTriggered) {
+            $(window).trigger('updatePoster');
+        }
     }
 }

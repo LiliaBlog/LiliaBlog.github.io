@@ -10,31 +10,29 @@ import MyPoster from './myPoster.jsx';
 class App extends Component {
   componentDidMount() {
     var defaultHeight = $(window).innerHeight();
+    render(<Poster />, document.getElementById('posterContainer'));
     $(window).on('navShop', function () {
-      $('#poster').fadeIn(500);
-      $('#myPoster').hide();
+      render(<Poster />, document.getElementById('posterContainer'));
     });
     $(window).on('navOutfits', function () {
-      $('#poster').hide();
-      $('#myPoster').fadeIn(500);
+      render(<MyPoster />, document.getElementById('posterContainer'));
     });
-    $(window).scroll(()=>{
-      if ($(window).scrollTop() > defaultHeight / 2){
+    $(window).scroll(() => {
+      if ($(window).scrollTop() > defaultHeight / 2) {
         $('#backToTop').show();
       } else {
         $('#backToTop').hide();
       }
     });
-    $('#backToTop').click(()=>{
-      $("html, body").animate({scrollTop: 0}, 300);
+    $('#backToTop').click(() => {
+      $("html, body").animate({ scrollTop: 0 }, 300);
     });
   }
   render() {
     return (
       <div>
         <Header />
-        <Poster />
-        <MyPoster />
+        <div id="posterContainer"></div>
         <div id="backToTop">
           <button>TOP</button>
         </div>
