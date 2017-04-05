@@ -100,6 +100,7 @@ body {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
     -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
     overflow: hidden;
+    background-color: white;
 }
 
 .myPost .img {
@@ -117,6 +118,15 @@ body {
     font-family: 'Montserrat-Light';
     font-size: 1.2vw;
     padding: 5% 2%;
+    background-color: white;
+}
+
+.myPost .postText {
+    float: left;
+    color: #888;
+    font-family: 'Montserrat-Light';
+    font-size: 1.2vw;
+    padding: 2% 2%;
     background-color: white;
 }
 

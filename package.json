@@ -4,7 +4,8 @@
   "description": "beauty blog",
   "main": "index.html",
   "scripts": {
-    "build": "webpack -p --watch --progress"
+    "build": "webpack -p --watch --progress",
+    "start": "lite-server"
   },
   "repository": {
     "type": "git",
